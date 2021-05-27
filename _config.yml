@@ -18,12 +18,12 @@
 # Feel free to change these! For more info, refer to:
 # ~> https://jekyllrb.com/docs/configuration/options/
 
-title:            'Wax'
-description:      'Minimal Exhibitions with Jekyll'
-url:              'https://minicomp.github.io'
-baseurl:          '/wax'
-copyright:        'Example copyright org, 2019'
-logo:             '/assets/logo.png'
+title:            'PO Box 34'
+description:      'Connecting voices inside with voices outside'
+url:              'https://pobox34.github.io'
+baseurl:          '/pobox-34'
+copyright:        'All rights reserved, 2021'
+logo:             'logo.png'
 
 # ---------------------------------------------------------------
 # BUILD SETTINGS
@@ -62,15 +62,21 @@ kramdown:
 # ~> https://jekyllrb.com/docs/collections/
 
 collections:
-  exhibits:
+  posts:
     output: true
-  qatar: # name of collection
-    output: true # makes sure pages are output as html files
-    layout: 'qatar_item' # the layout for the pages to use
+    layout: 'post'
+  writers:
+    output: true
+    layout: 'writer'
     metadata:
-      source: 'qatar.csv' # path to the metadata file within `_data`
+      source: 'writers.csv'
+  works: # name of collection
+    output: true # makes sure pages are output as html files
+    layout: 'work' # the layout for the pages to use
+    metadata:
+      source: 'works.csv' # path to the metadata file within `_data`
     images:
-      source: 'raw_images/qatar' # path to the directory of images within `_data`
+      source: 'raw_images/works' # path to the directory of images within `_data`
 
 # --------------------------------------------------------------
 # SEARCH INDEX SETTINGS
@@ -84,15 +90,12 @@ search:
   main:
     index: '/search/index.json' # file the index will get written to
     collections:
-      qatar:
+      works:
         content: false # whether or not to index page content
         fields: # the metadata fields to index
-          - artist
-          - location
+          - writer
           - label
           - _date
-          - object_type
-          - current_location
 
 # --------------------------------------------------------------
 # SITE MENU SETTINGS
@@ -104,24 +107,56 @@ search:
 menu:
   - label: 'About'
     sub:
-      - label: 'Wax'
-        link: '/about/'
-      - label: 'Documentation'
-        link: 'https://minicomp.github.io/wiki/wax/'
-      - label: 'Credits'
-        link: '/credits/'
-  - label: 'Exhibits'
+      - label: 'About the Project'
+        link: '/about'
+      - label: 'Hidden Lives Illuminated'
+        link: '/hidden-lives-illuminated'
+      - label: 'Team'
+        link: '/team'
+  - label: 'Writers'
     sub:
-      - label: 'Inline Parallax Image'
-        link: '/exhibits/a/'
-      - label: 'Inline Image References'
-        link: '/exhibits/b/'
+      - label: 'Aaron W'
+        link: '/writers/aaron-w/'
+      - label: 'Alexander S'
+        link: '/writers/alexander-s/'
+      - label: 'Clarence S'
+        link: 'writers/clarence-s/'
+      - label: 'David G'
+        link: '/writers/david-g/'
+      - label: 'Donyea P'
+        link: 'writers/donyea-p/'
+      - label: 'Ezra B'
+        link: '/writers/ezra-b/'
+      - label: 'Joseph K'
+        link: '/writers/joseph-k/'
+      - label: 'Joseph S'
+        link: '/writers/joseph-s/'
+      - label: 'Justino G'
+        link: '/writers/justino-g/'
+      - label: 'Marvin S'
+        link: '/writers/marvin-s/'
+      - label: 'Myke L'
+        link: '/writers/myke-l/'
+      - label: 'Paul M'
+        link: '/writers/paul-m/'
+      - label: 'Quasheam R'
+        link: '/writers/quasheam-r/'
   - label: 'Browse'
-    link: '/collection/'
+    sub:
+      - label: 'Browse the Collection'
+        link: '/collection/'
+      - label: 'Covid Responses'
+        link: '/covid-responses/'
+  - label: 'Blog'
+    link: '/blog/'
   - label: 'Search'
     link: '/search/'
-  - label: 'Reuse'
-    link: '/reuse/'
+  - label: 'Support'
+    sub:
+      - label: 'Write to the Writers'
+        link: '/mailing-addresses/'
+      - label: 'Support the Project'
+        link: '/support/'
 
 # --------------------------------------------------------------
 # SITE FOOTER SETTINGS
@@ -131,12 +166,34 @@ menu:
 footer:
   links:
     - label: 'GitHub'
-      link: 'https://github.com/minicomp/wax'
-    - label: 'Credits'
-      link: '/credits'
-    - label: 'Contact'
-      link: 'https://gitter.im/minicomp/wax/'
+      link: 'https://github.com/pobox34/pobox-34'
+    - label: 'Team'
+      link: '/team'
   logos:
-    - img: '/img/logo.png'
+    - img: 'logo.png'
+
+# --------------------------------------------------------------
+# SITE ABOUT SETTINGS
+# --------------------------------------------------------------
+#
+
+about:
+  logos:
+    - label: 'Annenberg School for Communication'
+      img: 'img/logos/annenberg_logo.jpg'
+      link: 'https://www.asc.upenn.edu/'
+    - label: 'University of Pennsylvania'
+      img: 'img/logos/UniversityofPennsylvania_FullLogo_RGB.jpg'
+      link: 'https://www.upenn.edu/'
+    - label: 'Campaign for Community'
+      img: 'img/logos/campaign_for_community_logo.jpg'
+      link: 'https://provost.upenn.edu/campaign-community'
+    - label: 'Wolf Center for Humanities'
+      img: 'img/logos/wolf_logo.png'
+      link: 'https://wolfhumanities.upenn.edu/'
+    - label: 'Price Lab for Digital Humanities'
+      img: 'img/logos/price_lab_logo.png'
+      link: 'https://pricelab.sas.upenn.edu/'
+
 
 # FIN

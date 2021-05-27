@@ -2,16 +2,24 @@
 layout: page
 show_title: false
 banner:
-  collection: qatar
-  pid: obj10
+  collection: works
+  pid: obj28
   y: 25%
-  height: '500px'
 ---
 
-__Wax__ is a [minimal computing](http://go-dh.github.io/mincomp/) project for producing digital exhibitions focused on longevity, low costs, and flexibility. Our underlying technology is made to learn and to teach, and can produce beautifully rendered, high-quality image collections and scholarly exhibits. To start using Wax, please see our [documentation](https://minicomp.github.io/wiki/#/wax/) for installation instructions and more.
+__PO Box 34__ aims to connect incarcerated writers with a wider audience, including writing mentors and educators, collaborators from the international visual arts community, musicians, performers, people who express creatively. I hope this will open up conversation and ultimately get feedback, correspondence & connection to the writers and artists in prison.
 
-The collection items in this demo are from The Museum of Islamic Art, Qatar, (courtesy of [WikiMedia](https://commons.wikimedia.org/wiki/Category:Google_Art_Project_works_in_The_Museum_of_Islamic_Art,_Qatar) and [Google Art Project](https://www.google.com/culturalinstitute/about/artproject/)) and The Qatar National Library (via [World Digital Library](https://www.wdl.org/en/)).
+The world is burning.
 
-### Browse the Collection
+We have set up a [GoFundMe](http://gf.me/u/yp8fys) page to raise funds to keep the project running. Thank you for your support!
 
-{% include collection_gallery.html facet_by='object_type' collection='qatar' %}
+Please send writing submissions, artwork, & inquiries to PO Box 34, Collingswood, NJ. 08108, USA or email pobox34@protonmail.com.
+
+<p class="text-center"><a href="/covid-gif/">
+  <img src ="{{ 'img/COVID.gif' | absolute_url }}" class="mx-auto d-block" height="250">
+  Covid Gif by Go and David G
+</a></p>
+
+### Recent Works 
+
+{% include collection_gallery.html facet_by='writer' collection='works' %}
